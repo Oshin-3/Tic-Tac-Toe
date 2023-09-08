@@ -1,0 +1,90 @@
+.container
+{
+    width: 650px;
+    height: 650px;
+    margin: 30px auto auto auto;
+    text-align: center;
+}
+
+#game-name
+{
+    width: 450px;
+    margin: 0 auto;
+    color: #FFD523;
+}
+
+#winner-board
+{
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: #2C2E43;
+}
+
+#game-board
+{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: #B2B1B9;
+    border-radius: 10px;
+}
+
+#selection-board
+{
+    width: 450px;
+    height: 70px;
+    margin: 0 auto;
+    
+}
+
+.each-box
+{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.box-bottom-border
+{
+    border-bottom: 2px solid #FFD523;
+}
+
+.box-right-border
+{
+    border-right: 2px solid #FFD523;
+}
+
+#X-button
+{
+    width: 150px;
+    height: 70px;
+    float: left;
+    font-size: 40px;
+    background-color: #FFD523;
+    border: #FFD523;
+}
+
+#O-button
+{
+    width: 150px;
+    height: 70px;
+    float: right;
+    font-size: 40px;
+    background-color: #FFD523;
+    border: #FFD523;
+}
+
+.change-backgroud
+{
+    background-color: #595260;
+    border-radius: 10px;
+}
+
