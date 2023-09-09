@@ -11,12 +11,47 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="login">
+        <div id="game-name">
+            <h1>Tic Tac Toe</h1>
+        </div>
+        <br>
+
+        <div class="row justify-content-center" id="login-content">
+            <form method="post">
+                <div class="row" style="margin-top: 100px;">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label for="Username">Player 1</label>
+                        </div> 
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="player1" name="player1" placeholder="Enter Name" required="true"> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label for="Username">Player 2</label>
+                        </div> 
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="player2" name="player2" placeholder="Enter Name" required="true"> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 150px;">
+                    <!-- <button type="button" class="btn btn-primary" id="play" onclick="displayGame()">Play</button> -->
+                    <button type="button" class="btn btn-primary" id="play" onclick="displayGame()">Play</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="game">
         <div id="game-name">
             <h1>Tic Tac Toe</h1>
         </div>
         <div id="winner-board">
-            <p>Player 1</p>
+            <p><span id="player-turn"></span>'s turn</p>
         </div>
         <div id="game-board">
             
@@ -38,7 +73,7 @@
                     <h4 class="modal-title" style="color: #FFD523; font-weight: bolder;" id="congratulationsHeader">Congratulations!!! &#129395;</h4>                    
                 </div>
                 <div class="modal-body">
-                    <p id="congratulationsBody"><span id="player"></span> &#127942; is a winner</p>
+                    <p id="congratulationsBody"><span id="player"></span> &#127942; is the winner</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload()">Close</button>

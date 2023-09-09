@@ -88,3 +88,42 @@
     border-radius: 10px;
 }
 
+
+#login-content
+{
+    background-color: #FFD523;
+    border: #FFD523;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+}
+
+.row
+{
+    margin-top: 100px;
+}
+
+label
+{
+    display: inline-block;
+    color: #2C2E43;
+    width: 200px;
+    height: 30px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+#play
+{
+    width: 150px;
+    height: 50px;
+    font-size: medium;
+    background-color: #2C2E43;
+    border: #FFD523;
+}
+
+.row
+{
+    margin: 20px;
+}

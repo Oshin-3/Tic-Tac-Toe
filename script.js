@@ -3,6 +3,8 @@ var daigonal1 = new Array(3);
 var daigonal2 = new Array(3);
 var totalFrequency = 9;
 var isTie = -1;
+var player1 = null;
+var player2 = null;
 
 var gameBoard = 
 [
@@ -12,11 +14,21 @@ var gameBoard =
 ]
 window.onload = function()
 {
-    displayGame();
+    document.getElementById("game").style.display = "none";
+    // let btn = document.getElementById("play");
+    // btn.addEventListener("click", displayGame());
 }
+
 
 function displayGame()
 {
+    document.getElementById("game").style.display = "";
+    document.getElementById("login").style.display = "none";
+    player1 = document.getElementById("player1").value;
+    player2 = document.getElementById("player2").value;
+    console.log(player1);
+    console.log(player2);
+    document.getElementById("player-turn").innerText = player1;
     //appending board
     for (let i = 0; i < 3; i++)
     {
@@ -38,7 +50,6 @@ function displayGame()
             console.log(box.id);        
         }
     }
-    
 }
 
 function selectXSymbol()
@@ -72,7 +83,7 @@ function appendSymbol()
             this.classList.add("change-backgroud");
             document.getElementById("O-button").disabled = false;
             document.getElementById("X-button").disabled = true;
-            document.getElementById("winner-board").innerHTML = "Player 2";
+            document.getElementById("player-turn").innerText = player2;
             symbolSelected = null;
         }
         else
@@ -83,7 +94,7 @@ function appendSymbol()
             this.classList.add("change-backgroud");
             document.getElementById("X-button").disabled = false;
             document.getElementById("O-button").disabled = true;
-            document.getElementById("winner-board").innerHTML = "Player 1";
+            document.getElementById("player-turn").innerHTML = player1;
             symbolSelected = null;
         }
     }
@@ -121,13 +132,13 @@ function checkFrequencyDaigonal()
     }
     if (xCount1 == 3) {
         console.log("Player 1 is the winner");
-        document.getElementById("player").innerText = "Player 1";
+        document.getElementById("player").innerText = player1;
         $("#congratulationsModal").modal('show');
         isTie = 0;
     }
     if (oCount1 == 3) {
         console.log("Player 2 is the winner");
-        document.getElementById("player").innerText = "Player 2";
+        document.getElementById("player").innerText = player2;
         $("#congratulationsModal").modal('show');
         isTie = 0;
     }
@@ -152,13 +163,13 @@ function checkFrequencyDaigonal()
     }
     if (xCount2 == 3) {
         console.log("Player 1 is the winner");
-        document.getElementById("player").innerText = "Player 1";
+        document.getElementById("player").innerText = player1;
         $("#congratulationsModal").modal('show');
         isTie = 0;
     }
     if (oCount2 == 3) {
         console.log("Player 2 is the winner");
-        document.getElementById("player").innerText = "Player 2";
+        document.getElementById("player").innerText = player2;
         $("#congratulationsModal").modal('show');
         isTie = 0;
     }
@@ -183,13 +194,13 @@ function checkFrequencyRowsandColumns()
 
         if (xCount1 == 3) {
             console.log("Player 1 is the winner");
-            document.getElementById("player").innerText = "Player 1";
+            document.getElementById("player").innerText = player1;
             $("#congratulationsModal").modal('show');
             isTie = 0;
         }
         if (oCount1 == 3) {
             console.log("Player 2 is the winner");
-            document.getElementById("player").innerText = "Player 2";
+            document.getElementById("player").innerText = player2;
             $("#congratulationsModal").modal('show');
             isTie = 0;
         }
@@ -211,14 +222,14 @@ function checkFrequencyRowsandColumns()
 
         if (xCount2 == 3) {
             console.log("Player 1 is the winner");
-            document.getElementById("player").innerText = "Player 1";
+            document.getElementById("player").innerText = player1;
             $("#congratulationsModal").modal('show');
             isTie = 0;
             
         }
         if (oCount2 == 3) {
             console.log("Player 2 is the winner");
-            document.getElementById("player").innerText = "Player 2";
+            document.getElementById("player").innerText = player2;
             $("#congratulationsModal").modal('show');   
             isTie = 0;         
         }        
