@@ -84,7 +84,7 @@ function appendSymbol()
             document.getElementById("O-button").disabled = false;
             document.getElementById("X-button").disabled = true;
             document.getElementById("player-turn").innerText = player2;
-            symbolSelected = null;
+            symbolSelected = "O";
         }
         else
         {
@@ -95,7 +95,7 @@ function appendSymbol()
             document.getElementById("X-button").disabled = false;
             document.getElementById("O-button").disabled = true;
             document.getElementById("player-turn").innerHTML = player1;
-            symbolSelected = null;
+            symbolSelected = "X";
         }
     }
     checkFrequencyDaigonal();
