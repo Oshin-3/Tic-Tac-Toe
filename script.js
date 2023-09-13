@@ -12,22 +12,37 @@ var gameBoard =
     [0, 0, 0],
     [0, 0, 0]
 ]
+
 window.onload = function()
 {
     document.getElementById("game").style.display = "none";
-    // let btn = document.getElementById("play");
-    // btn.addEventListener("click", displayGame());
 }
 
+function validateUsers()
+{
+    console.log("Inside valide user function");
+    player1 = document.getElementById("player1").value;
+    player2 = document.getElementById("player2").value;
+    console.log(player1);
+    console.log(player2);
+    if (player1 != "" && player2 != "")
+    {
+        displayGame();
+    }
+    else if (player1 == "")
+    {
+        document.getElementById("message").innerText = "Enter Player 1 Name";
+    }
+    else if (player2 == "")
+    {
+        document.getElementById("message").innerText = "Enter Player 2 Name";
+    }
+}
 
 function displayGame()
 {
     document.getElementById("game").style.display = "";
     document.getElementById("login").style.display = "none";
-    player1 = document.getElementById("player1").value;
-    player2 = document.getElementById("player2").value;
-    console.log(player1);
-    console.log(player2);
     document.getElementById("player-turn").innerText = player1;
     //appending board
     for (let i = 0; i < 3; i++)

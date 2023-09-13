@@ -18,14 +18,17 @@
         <br>
 
         <div class="row justify-content-center" id="login-content">
-            <form method="post">
+            <form method="post" id="myform">
+                <div class="row">
+                    <p id="message"> </p>
+                </div>
                 <div class="row" style="margin-top: 100px;">
                     <div class="form-group">
                         <div class="col-sm-4">
                             <label for="Username">Player 1</label>
                         </div> 
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="player1" name="player1" placeholder="Enter Name" required="true"> 
+                            <input type="text" class="form-control" id="player1" name="player1" placeholder="Enter Name"> 
                         </div>
                     </div>
                 </div>
@@ -35,13 +38,13 @@
                             <label for="Username">Player 2</label>
                         </div> 
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="player2" name="player2" placeholder="Enter Name" required="true"> 
+                            <input type="text" class="form-control" id="player2" name="player2" placeholder="Enter Name"> 
                         </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 150px;">
                     <!-- <button type="button" class="btn btn-primary" id="play" onclick="displayGame()">Play</button> -->
-                    <button type="button" class="btn btn-primary" id="play" onclick="displayGame()">Play</button>
+                    <button type="button" class="btn btn-primary" id="play" onclick="validateUsers()">Play</button>
                 </div>
             </form>
         </div>
